@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import shuffle from 'lodash.shuffle'
 
 import classes from './Question.module.css'
 
@@ -8,20 +9,18 @@ import Button from '../Button'
 import decodeText from './decodeText'
 
 
+const getShuffledAnswers = question => shuffle([question.correct_answer, ...question.incorrect_answers])
+
 class Question extends Component {
     state = {
-        orderedAnswers: [...this.props.question.incorrect_answers, this.props.question.correct_answer],
+        orderedAnswers: getShuffledAnswers(this.props.question),
         selectedAnswer: null
     }
 
     componentDidUpdate(prevProps) {
         const { question } = this.props
         if (question !== prevProps.question)
-            this.setState({
-                orderedAnswers: [...this.props.question.incorrect_answers,
-                this.props.question.correct_answer],
-                selectedAnswer: null
-            })
+            this.setState({ orderedAnswers: getShuffledAnswers(question), selectedAnswer: null })
     }
 
     onAnswerSelected = answer => {
