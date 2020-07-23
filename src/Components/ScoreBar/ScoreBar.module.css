@@ -1,0 +1,33 @@
+.summaryContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barsContainer {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+
+.barsContainer > * {
+    height: 100%;
+}
+
+.minBar {
+    background-color: black;
+}
+
+.maxBar {
+    background-color: lightgray;
+}
+
+.currentBar {
+    background-color: gray;
+}
