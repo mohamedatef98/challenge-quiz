@@ -1,0 +1,30 @@
+.button {
+    padding: 0.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.primary {
+    background-color: lightgray;
+    border-color: black;
+    color: black;
+}
+
+.secondary {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.disabled {
+    background-color: lightgray;
+    color: grey;
+    border-color: grey;
+}
