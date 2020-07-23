@@ -1,0 +1,16 @@
+.solution {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.message {
+    margin: 0;
+}
+
+.next {
+    background-color: lightgray;
+    padding: 1rem;
+}
