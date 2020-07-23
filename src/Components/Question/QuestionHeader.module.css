@@ -1,0 +1,15 @@
+.header {
+    margin-bottom: 1rem;
+}
+
+.index, .category {
+    margin: 0;
+}
+
+.index {
+    color: #4d4d4d;
+}
+
+.category {
+    color: gray;
+}
