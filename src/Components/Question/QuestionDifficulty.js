@@ -11,7 +11,7 @@ const QuestionDifficulty = ({ difficulty }) => {
     else if (difficulty === 'easy') numberOfStars = 1
     else numberOfStars = 0
 
-    return [1,2,3,4,5].map(el => <span className={cs([classes.star, el <= numberOfStars ? classes.black : classes.grey])} key={el}>&#128969;</span>)
+    return [1,2,3,4,5].map(el => <span className={cs([classes.star, el <= numberOfStars ? classes.black : classes.grey])} key={el}>&#9733;</span>)
 }
 
 QuestionDifficulty.propTypes = {
